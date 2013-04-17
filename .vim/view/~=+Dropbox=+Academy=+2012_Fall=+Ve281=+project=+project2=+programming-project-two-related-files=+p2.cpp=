@@ -1,9 +1,6 @@
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
-setlocal keymap=
-setlocal noarabic
 setlocal noautoindent
-setlocal balloonexpr=
 setlocal nobinary
 setlocal bufhidden=
 setlocal buflisted
@@ -16,8 +13,6 @@ setlocal colorcolumn=
 setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
 setlocal commentstring=/*%s*/
 setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
 setlocal completefunc=youcompleteme#Complete
 setlocal nocopyindent
 setlocal cryptmethod=
@@ -47,8 +42,8 @@ setlocal formatexpr=
 setlocal formatoptions=mMcroql
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
-setlocal iminsert=2
-setlocal imsearch=2
+setlocal iminsert=0
+setlocal imsearch=0
 setlocal include=
 setlocal includeexpr=
 setlocal indentexpr=
@@ -59,7 +54,6 @@ setlocal keywordprg=
 setlocal linebreak
 setlocal nolisp
 setlocal list
-setlocal nomacmeta
 setlocal makeprg=
 setlocal matchpairs=(:),{:},[:]
 setlocal modeline
@@ -74,8 +68,6 @@ setlocal nopreviewwindow
 setlocal quoteescape=\\
 setlocal noreadonly
 setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal shiftwidth=2
 setlocal noshortname
@@ -102,13 +94,17 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 20
-normal! zo
-let s:l = 33 - ((29 * winheight(0) + 18) / 37)
+normal zo
+23
+normal zo
+20
+normal zo
+let s:l = 23 - ((22 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-33
-normal! 01l
+23
+normal! 091l
 lcd ~/Desktop
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
