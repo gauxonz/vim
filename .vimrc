@@ -20,6 +20,7 @@ set nocompatible               " be iMproved
  "cd ~/.vim/bundle/YouCompleteMe
  "./install.sh --clang-completer
  " vim-scripts repos
+ Bundle 'scrooloose/syntastic' 
  Bundle 'taglist.vim'
  Bundle 'winmanager'
  Bundle 'minibufexpl.vim'
@@ -67,8 +68,9 @@ nnoremap <silent> <F12> :A<CR> " not work on mac
 nnoremap <silent> <F3> :Grep<CR> "not work on mac
 
 "### YouCompeletMe ###
-let g:ycm_global_ycm_extra_conf = '/Users/Gauxonz/.vim/bundle/YouCompleteMe/'
-
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+"let g:ycm_extra_conf_globlist = ['~/.vim/bundle/YouCompleteMe/*']
+let g:ycm_confirm_extra_conf = 0
 "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 """""""""""""""""""""""""""""""""""""
